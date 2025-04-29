@@ -309,10 +309,47 @@ console.log(generateLink("Google", "https://google.com"));
     Input: "Order#123 was placed at 5pm on 4/5/2023"
 */
 
+let messy = function messy(string){
+    const num_dig = string.match(/\d/g);
+    const len = num_dig ? num_dig.length : 0;
+    console.log(num_dig);
+    console.log(num_dig.length);
+}
+
+messy("Order#123 was placed at 5pm on 4/5/2023");
+
+messy = function messy(string){
+    const num_dig = [...string.matchAll(/\d/g)]; // spread operator used to convert iterator into an array
+    const len = num_dig ? num_dig.length : 0;
+    // let arr = [];
+    // num_dig.forEach(element => {
+    //     arr.push(element[0]);
+    // })
+    // console.log(arr);
+    // console.log(arr.length);
+    let arr = num_dig.map(element => element[0]);
+    console.log(arr);
+    console.log(arr.length);
+}
+
+messy("Order#123 was placed at 5pm on 4/5/2023");
+
 /*  Task 13:
     Use .normalize() to:
     Compare two visually identical Unicode strings that might be encoded differently.
 */
+
+const str1 = "é";             // U+00E9 (single character)
+const str2 = "e\u0301";       // 'e' + U+0301 (combining acute accent)
+
+console.log("Raw comparison:", str1 === str2); // false
+
+// Normalize both to the same Unicode form
+const normalized1 = str1.normalize('NFC'); // NFC = Normalization Form Composed
+const normalized2 = str2.normalize('NFC');
+
+console.log("After normalization:", normalized1 === normalized2); // true
+
 
 
 /*  Task 14:
@@ -320,6 +357,10 @@ console.log(generateLink("Google", "https://google.com"));
     Emojis often have multiple Unicode points.
     Write a function that counts emojis using .codePointAt() carefully.
 */
+
+const emojico = function emojico(string){
+
+}
 
 /*  Task 15:
     Create a string formatter:
