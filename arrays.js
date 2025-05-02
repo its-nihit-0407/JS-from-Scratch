@@ -192,7 +192,6 @@ console.log(forev)
 
 // splice method
 console.log(forev.splice(0, 3, 3));
-console.log(forev)
 
 //toLocaleString
 console.log(typeof forev.toLocaleString())
@@ -209,6 +208,7 @@ console.log(forev.toSpliced(0, 3, 4));
 forev = [1, 2, 3, 4, 5];
 //unshift 
 console.log(forev.unshift(2)); // returns the new length of an array
+console.log(forev)
 
 console.log([...forev.values()])
 
