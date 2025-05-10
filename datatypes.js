@@ -19,4 +19,4 @@ console.table({
     undefined_val: typeof undefined_val,
     bigint: typeof bigint,
     symbol: typeof symbol
-})
+}) 
