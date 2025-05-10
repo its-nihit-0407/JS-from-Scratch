@@ -184,3 +184,53 @@ console.log(createUser("Nihit", 18))
 console.log(Object.keys(library));
 console.log(Object.values(library));
 console.log(Object.entries(library));
+
+// - Write a function deepClone(obj) to deeply clone a nested object.
+function deepClone(obj) {
+    if (obj === null || typeof obj !== 'object') {
+        return obj;
+    }
+
+    if (obj instanceof Array) {
+        return obj.map(item => deepClone(item));
+    }
+
+    if (obj instanceof Date){
+        return new Date(obj.getTime());
+    }
+
+    const newOb = {};
+    for (let elem in obj){
+        if (obj.hasOwnProperty(elem)) {
+            newOb[elem] = obj[elem];
+        }
+    }
+
+    return newOb;
+}
+
+console.log(deepClone([1, 2, 3, 4]));
+
+// Create a function groupBy(arr, key) that groups objects in an array by a specific key.
+function groupBy(arr, key) {
+    return arr.reduce((result, obj) => {
+        const groupkey = obj[key];
+        if (!result[groupkey]) {
+            result[groupkey] = [];
+        }
+        result[groupkey].push(obj.name);
+        return result;
+    }, {})
+}
+
+const data = [
+    { name: "Alice", role: "admin" },
+    { name: "Bob", role: "user" },
+    { name: "Charlie", role: "admin" },
+    { name: "David", role: "user" },
+    { name: "Eve", role: "guest" }
+];
+
+const grouped = groupBy(data, 'role');
+console.log(grouped);
+
