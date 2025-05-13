@@ -29,3 +29,15 @@ console.log(Object.entries(obj));
 Object.entries(obj).forEach((element => {
     console.log(`${element}`)
 }))
+
+const newarr2 = (con) => {
+    return con +2 
+}
+
+console.log(newarr2(4))
+
+if (true) {
+    var hell = 'hell'
+}
+
+console.log(hell)
