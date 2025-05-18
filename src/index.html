@@ -5,7 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+<body style="background-color: #212121; color: white;">
+    <div class="parent">
+        <!-- this is a comment -->
+         <div class="day">Monday</div>
+         <div class="day">Tuesday</div>
+         <div class="day">Wednesday</div>
+         <div class="day">Thursday</div>
+    </div>
+    <script>
+        const ele = document.querySelector('.parent')
+        const ele2 = document.querySelector('.day')
+        console.log(Array(ele))
+        console.log(ele)
+        console.log(ele.children[1].innerHTML)
+        
+        for (let i=0; i < ele.children.length; i++){
+            console.log(ele.children[i].innerHTML)
+        }console.log(ele.lastChild)
+        
+        ele.children[1].style.color = 'green'
+        console.log(ele2.nextElementSibling)
+
+        console.log('Nodes: ', ele.childNodes)
+    </script>
 </body>
 </html>

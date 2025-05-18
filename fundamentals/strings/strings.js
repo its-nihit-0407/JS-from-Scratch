@@ -51,8 +51,10 @@ console.log(str.toLowerCase());
 console.log(str.toUpperCase());
 console.log(str.toString()); // same as type conversion
 console.log(str.trim());// removes the leading an trailing space from the string
-console.log(str.trimEnd()); // removes the trailing white spaces
+console.log(str.trimEnd()); // removes the trailinding an trailing space from the string
+console.log(str.trimEnd()); // removes the traig white spaces
 console.log(str.trimLeft()); // removes the leading whitespaces
 console.log(str.trimStart()); // removes the leading whitespaces
 console.log(str.trimRight()); // removes the trailing whitespaces
 console.log(str.valueOf()) // returns the primitive value of object
+
