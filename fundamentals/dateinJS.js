@@ -68,7 +68,7 @@ console.log(Math.floor(Date.now()/1000));
 let newDate = new Date()
 console.log(newDate.toString())
 
-// `${newDate.getDay()} and the time `
+`${newDate.getDay()} and the time `
 
 let a = newDate.toLocaleString('default', {
     weekday: "long",
